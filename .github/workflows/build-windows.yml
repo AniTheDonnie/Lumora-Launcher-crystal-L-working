@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build Windows EXE
-        run: npm run dist
+        run: npx electron-builder --win portable nsis --publish never
 
       - name: Upload LUMORA EXE
         uses: actions/upload-artifact@v4
